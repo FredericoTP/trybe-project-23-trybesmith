@@ -1,7 +1,7 @@
 import { Product } from '../../interfaces/product.interface';
-import { User } from '../../interfaces/user.interface';
+import { User, UserLogin } from '../../interfaces/user.interface';
 import { ValidationError, ValidationSuccess } from '../../interfaces/validation.interface';
-import { newProductSchema, newUserSchema } from './schemas';
+import { newProductSchema, newUserSchema, userInfoSchema } from './schemas';
 
 const validateProduct = (product: Product): ValidationError | ValidationSuccess => {
   const { error } = newProductSchema.validate(product);
@@ -19,4 +19,12 @@ const validateUser = (user: User): ValidationError | ValidationSuccess => {
   return { type: null, message: '' }; 
 };
 
-export { validateProduct, validateUser };
+const validateUserInfo = (userInfo: UserLogin): ValidationError | ValidationSuccess => {
+  const { error } = userInfoSchema.validate(userInfo);
+
+  if (error) return { type: 'UNAUTHORIZED', message: error.message };
+
+  return { type: null, message: '' }; 
+};
+
+export { validateProduct, validateUser, validateUserInfo };

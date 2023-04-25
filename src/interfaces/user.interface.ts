@@ -1,9 +1,9 @@
 interface User {
   id?: number;
-  username: string,
-  vocation: string,
-  level: number,
-  password: string
+  username: string;
+  vocation: string;
+  level: number;
+  password: string;
 }
 
 interface Token {
@@ -20,4 +20,9 @@ interface UserError {
   message: string;
 }
 
-export { User, Token, UserAdd, UserError };
+interface UserLogin {
+  username: string;
+  password: string;
+}
+
+export { User, Token, UserAdd, UserError, UserLogin };

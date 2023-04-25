@@ -24,4 +24,9 @@ const newUserSchema = Joi.object({
   password: passwordSchema,
 });
 
-export { newProductSchema, newUserSchema };
+const userInfoSchema = Joi.object({
+  username: usernameSchema,
+  password: passwordSchema,
+});
+
+export { newProductSchema, newUserSchema, userInfoSchema };

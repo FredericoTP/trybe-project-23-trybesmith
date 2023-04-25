@@ -1,5 +1,5 @@
 interface JwtPayload {
-  id: number;
+  id: number | undefined;
   name: string;
 }
 

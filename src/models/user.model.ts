@@ -1,4 +1,4 @@
-import { Pool, ResultSetHeader } from 'mysql2/promise';
+import { Pool, ResultSetHeader, RowDataPacket } from 'mysql2/promise';
 import { User, Token } from '../interfaces/user.interface';
 import { generateToken } from '../utils/auth';
 
@@ -8,6 +8,14 @@ class UserModel {
   constructor(connection: Pool) {
     this.connection = connection;
   } 
+
+  async getByUsername(username: string): Promise<User | undefined> {
+    const query = 'SELECT * FROM Trybesmith.users WHERE username = ?';
+
+    const [[user]] = await this.connection.execute<RowDataPacket[]>(query, [username]);
+
+    return user as (User | undefined);
+  }
 
   async addUser(user: User): Promise<Token> {
     const columns = Object.keys(user).join(', ');
