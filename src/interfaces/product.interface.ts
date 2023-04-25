@@ -14,4 +14,9 @@ interface ProductError {
   message: string;
 }
 
-export { Product, ProductAdd, ProductError };
+interface AllProducts {
+  type: null;
+  message: Product[];
+}
+
+export { Product, ProductAdd, ProductError, AllProducts };

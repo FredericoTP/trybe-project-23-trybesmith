@@ -8,6 +8,17 @@ class ProductController {
   constructor(productService = new ProductService()) {
     this.productService = productService;
     this.addProduct = this.addProduct.bind(this);
+    this.getAll = this.getAll.bind(this);
+  }
+
+  async getAll(_req: Request, res: Response) {
+    const { type, message } = await this.productService.getAll();
+
+    console.log(message);
+
+    if (type) return res.status(mapError(type)).json({ message });
+
+    return res.status(200).json(message);
   }
 
   async addProduct(req: Request, res: Response) {

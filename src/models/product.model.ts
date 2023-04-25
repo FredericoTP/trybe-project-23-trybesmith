@@ -8,6 +8,13 @@ class ProductModel {
     this.connection = connection;
   }
 
+  async getAll(): Promise<Product[]> {
+    const query = 'SELECT * FROM Trybesmith.products';
+    const [products] = await this.connection.execute(query);
+
+    return products as Product[];
+  }
+
   async addProduct(product: Product): Promise<Product> {
     const columns = Object.keys(product).join(', ');
     const placeholders = Object.keys(product).map((_item) => '?').join(', ');

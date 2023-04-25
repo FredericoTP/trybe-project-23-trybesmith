@@ -1,6 +1,6 @@
 import ProductModel from '../models/product.model';
 import connection from '../models/connection';
-import { Product, ProductAdd, ProductError } from '../interfaces/product.interface';
+import { Product, ProductAdd, ProductError, AllProducts } from '../interfaces/product.interface';
 import validateProduct from './validations/validationInputValues';
 
 class ProductService {
@@ -8,6 +8,12 @@ class ProductService {
 
   constructor() {
     this.model = new ProductModel(connection);
+  }
+
+  async getAll(): Promise<AllProducts> {
+    const products = await this.model.getAll();
+
+    return { type: null, message: products };
   }
 
   async addProduct(product: Product): Promise<ProductAdd | ProductError> {
