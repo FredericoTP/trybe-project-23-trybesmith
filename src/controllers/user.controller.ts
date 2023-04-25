@@ -1,5 +1,6 @@
 import { Request, Response } from 'express';
 import UserService from '../services/user.service';
+import { mapError } from '../utils/errorMap';
 
 class UserController {
   userService: UserService;
@@ -11,7 +12,9 @@ class UserController {
 
   async addUser(req: Request, res: Response) {
     const user = req.body;
-    const { message } = await this.userService.addUser(user);
+    const { type, message } = await this.userService.addUser(user);
+
+    if (type) return res.status(mapError(type)).json({ message });
 
     return res.status(201).json(message);
   }

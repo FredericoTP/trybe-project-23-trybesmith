@@ -1,6 +1,7 @@
 import UserModel from '../models/user.model';
 import connection from '../models/connection';
-import { User, UserAdd } from '../interfaces/user.interface';
+import { validateUser } from './validations/validationInputValues';
+import { User, UserAdd, UserError } from '../interfaces/user.interface';
 
 class UserService {
   model: UserModel;
@@ -9,7 +10,10 @@ class UserService {
     this.model = new UserModel(connection);
   }
 
-  async addUser(user: User): Promise<UserAdd> {
+  async addUser(user: User): Promise<UserAdd | UserError> {
+    const error = validateUser(user);
+    if (error.type) return error;
+
     const newUser = await this.model.addUser(user);
 
     return { type: null, message: newUser };

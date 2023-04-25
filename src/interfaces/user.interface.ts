@@ -15,4 +15,9 @@ interface UserAdd {
   message: Token;
 }
 
-export { User, Token, UserAdd };
+interface UserError {
+  type: string;
+  message: string;
+}
+
+export { User, Token, UserAdd, UserError };
