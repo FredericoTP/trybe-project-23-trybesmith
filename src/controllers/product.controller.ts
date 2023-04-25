@@ -14,8 +14,6 @@ class ProductController {
   async getAll(_req: Request, res: Response) {
     const { type, message } = await this.productService.getAll();
 
-    console.log(message);
-
     if (type) return res.status(mapError(type)).json({ message });
 
     return res.status(200).json(message);
