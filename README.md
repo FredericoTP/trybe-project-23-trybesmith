@@ -22,41 +22,41 @@ Em construção
   
 </summary>
 
-### 1. Crie migrations para as tabelas users, categories, blog_posts, posts_categories
+### 1.
 
-### 2. Crie o modelo User em src/models/User.js com as propriedades corretas
+### 2.
 
-### 3. Sua aplicação deve ter o endpoint POST /login
+### 3.
 
-### 4. Sua aplicação deve ter o endpoint POST /user
+### 4. 
 
-### 5. Sua aplicação deve ter o endpoint GET /user
+### 5. 
 
-### 6. Sua aplicação deve ter o endpoint GET /user/:id
+### 6. 
 
-### 7. Crie o modelo Category em src/models/Category.js com as propriedades corretas
+### 7. 
 
-### 8. Sua aplicação deve ter o endpoint POST /categories
+### 8. 
 
-### 9. Sua aplicação deve ter o endpoint GET /categories
+### 9.
 
-### 10. Crie o modelo BlogPost em src/models/BlogPost.js com as propriedades e associações corretas
+### 10.
 
-### 11. Crie o modelo PostCategory em src/models/PostCategory.js com as propriedades e associações corretas
+### 11. 
 
-### 12. Sua aplicação deve ter o endpoint POST /post
+### 12. 
   
-### 13. Sua aplicação deve ter o endpoint GET /post
+### 13.
   
-### 14. Sua aplicação deve ter o endpoint GET /post/:id
+### 14. 
   
-### 15. Sua aplicação deve ter o endpoint PUT /post/:id
+### 15.
   
-### 16. Sua aplicação deve ter o endpoint DELETE /post/:id
+### 16.
   
-### 17. Sua aplicação deve ter o endpoint DELETE /user/me
+### 17.
   
-### 18. Sua aplicação deve ter o endpoint GET /post/search?q=:searchTerm
+### 18. 
 
 </details>
 <br />
