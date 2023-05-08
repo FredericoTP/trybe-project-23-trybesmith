@@ -22,41 +22,21 @@ Em construção
   
 </summary>
 
-### 1.
+### 1. Crie um endpoint para o cadastro de produtos
 
-### 2.
+### 2. Crie um endpoint para a listagem de produtos
 
-### 3.
+### 3. Crie um endpoint para o cadastro de pessoas usuárias
 
-### 4. 
+### 4. Crie um endpoint para listar todos os pedidos
 
-### 5. 
+### 5. Crie um endpoint para o login de pessoas usuárias
 
-### 6. 
+### 6. Crie as validações dos produtos
 
-### 7. 
+### 7. Crie as validações para as pessoas usuárias
 
-### 8. 
-
-### 9.
-
-### 10.
-
-### 11. 
-
-### 12. 
-  
-### 13.
-  
-### 14. 
-  
-### 15.
-  
-### 16.
-  
-### 17.
-  
-### 18. 
+### 8. Crie um endpoint para o cadastro de um pedido
 
 </details>
 <br />
