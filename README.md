@@ -1,6 +1,6 @@
 # :computer: Projeto Trybesmith :computer:
 
-Em construção
+Nesse projeto desenvolvi uma API RESTful para uma loja de itens medievais. A API foi desenvolvida no modelo de camadas MSC com CRUD e autenticação por meio do JWT.
 
 <br />
 
