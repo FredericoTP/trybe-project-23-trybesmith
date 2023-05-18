@@ -50,7 +50,7 @@ Nesse projeto desenvolvi uma API RESTful para uma loja de itens medievais. A API
 
 ## 100% :heavy_check_mark:
 
-![Project-Trybesmith]()
+![Project-Trybesmith](https://raw.githubusercontent.com/FredericoTP/trybe-project-23-trybesmith/main/images/trybesmith.png)
 
 </details>
 <br />
